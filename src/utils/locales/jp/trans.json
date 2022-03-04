@@ -1,0 +1,37 @@
+{
+  "menu": "MENU JP",
+  "close": "CLOSE JP",
+
+  "link": "Link JP",
+
+  "hi": "สวัสดี, ฉันชื่อบอส",
+  "frontend": "a Front End Developer",
+
+  "languages": "LANGUAGES",
+
+  "Name": "Name",
+  "Age": "Age",
+  "Personality Types": "ประเภทบุคคลิกภาพ",
+  "Language": "ภาษา",
+  "Hobby": "งานอดิเรก",
+  "Email": "อีเมล",
+  "Open CV": "Open CV",
+
+  "Phisek Pinpia": "Phisek Pinpia",
+  "Boss": "Boss",
+  "Introvert": "Introvert",
+  "lang": "Thai(Native), English(Fair)",
+  "hobby": "Anime, Music, Movie, Museum, Social Media",
+
+  "PROFICIENT": "PROFICIENT",
+  "EXPERIENCED": "EXPERIENCED",
+  "FAMILIAR": "FAMILIAR",
+
+  "home": "home jp",
+  "about me": "ABOUT ME jp",
+  "skills": "skills jp",
+  "projects": "projects jp",
+  "experience": "experience jp",
+
+  "iam": "I AM"
+}

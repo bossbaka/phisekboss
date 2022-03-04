@@ -1,0 +1,39 @@
+{
+  "menu": "MENU",
+  "close": "CLOSE",
+
+  "link": "Link",
+
+  "hi": "Hi, I’m Boss",
+  "frontend": "a Front End Developer",
+
+  "languages": "LANGUAGES",
+
+  "Name": "Name",
+  "Age": "Age",
+  "Personality Types": "Personality Types",
+  "Language": "Language",
+  "Hobby": "Hobby",
+  "Email": "Email",
+  "Open CV": "Open CV",
+  
+  "Phisek Pinpia": "Phisek Pinpia",
+  "Boss": "Boss",
+  "Introvert": "Introvert",
+  "lang": "Thai(Native), English(Fair)",
+  "hobby": "Anime, Music, Movie, Museum, Social Media",
+
+  "PROFICIENT": "PROFICIENT",
+  "EXPERIENCED": "EXPERIENCED",
+  "FAMILIAR": "FAMILIAR",
+
+
+
+  "home": "HOME",
+  "about me": "ABOUT ME",
+  "skills": "SKILLS",
+  "projects": "PROJECTS",
+  "experience": "EXPERIENCE",
+
+  "iam": "I AM"
+}

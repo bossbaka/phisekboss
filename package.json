@@ -6,12 +6,22 @@
     "start": "next start"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.8",
+    "@chakra-ui/icons": "^1.1.5",
+    "@chakra-ui/react": "^1.7.4",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@fullpage/react-fullpage": "^0.1.19",
+    "framer-motion": "^5",
+    "graphql": "^16.3.0",
     "i18next": "^21.6.6",
+    "i18next-browser-languagedetector": "^6.1.2",
     "next": "latest",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-i18next": "^11.15.3",
-    "sass": "^1.46.0",
-    "styled-components": "^5.3.3"
+    "react-icons": "^4.3.1",
+    "react-intersection-observer": "^8.33.1",
+    "use-sound": "^4.0.1"
   }
 }
