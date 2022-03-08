@@ -1,10 +1,12 @@
 import React from "react";
-import { Text, Flex, Heading, Link, Image, Container } from "@chakra-ui/react";
+import { Text, Flex, Heading, Link, Container } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@chakra-ui/react";
 import { FaEnvelope, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Image from "components/Image";
+import MyImage from "/public/static/home.jpg";
 
 const Home = () => {
   const sentence = {
@@ -42,7 +44,12 @@ const Home = () => {
     <>
       <Container maxW="8xl">
         <Flex align="center" pos="relative" w="100%" h="100vh">
-          <motion.div variants={sentence} initial="hidden" animate="visible">
+          <motion.div
+            variants={sentence}
+            initial="hidden"
+            animate="visible"
+            style={{ zIndex: "99", position: "absolute" }}
+          >
             <Heading
               as="h2"
               size="2xl"
@@ -76,7 +83,18 @@ const Home = () => {
             </Heading>
           </motion.div>
 
-          <Bg />
+          <div
+            style={{ right: "0", position: "absolute", opacity: "0.7" }}
+            className="displayimages"
+          >
+            <Image
+              src={MyImage}
+              alt="bg"
+              width="828px"
+              height="552px"
+              placeholder="blur"
+            />
+          </div>
 
           <ContactSocial>
             <Flex direction="column" align="center" rowGap={"5px"}>
@@ -89,6 +107,7 @@ const Home = () => {
                   _hover={{
                     transform: "scale(1.1)",
                   }}
+                  aria-label="[link]"
                 >
                   <Icon as={item.icons} boxSize="33px" />
                 </Link>
@@ -102,19 +121,6 @@ const Home = () => {
 };
 
 export default Home;
-
-const Bg = styled(Image)`
-  background-image: url("static/home.jpg");
-  width: 65%;
-  height: 65%;
-  background-position: 50% 48%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  opacity: 0.7;
-`;
 
 const ContactSocial = styled.div`
   position: absolute;

@@ -1,8 +1,6 @@
 import Head from "next/head";
-import AboutMe from "components/SectionHomePage/about/AboutMe";
-import Project from "components/SectionHomePage/project/Project";
+import dynamic from "next/dynamic";
 import ReactFullpage from "@fullpage/react-fullpage";
-import Home from "components/SectionHomePage/home/Home";
 
 import {
   ApolloClient,
@@ -11,6 +9,14 @@ import {
   gql,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+
+const Home = dynamic(() => import("components/SectionHomePage/home/Home"));
+const AboutMe = dynamic(() =>
+  import("components/SectionHomePage/about/AboutMe")
+);
+const Project = dynamic(() =>
+  import("components/SectionHomePage/project/Project")
+);
 
 export async function getStaticProps() {
   const httpLink = createHttpLink({
@@ -75,7 +81,6 @@ export async function getStaticProps() {
 }
 
 export default function Index({ pinnedItems }) {
-  console.log(pinnedItems);
   return (
     <>
       <Head>
@@ -89,16 +94,16 @@ export default function Index({ pinnedItems }) {
           #fp-nav ul li a span,
           .fp-slidesNav ul li a span {
             background: #cf3860 !important;
+            opacity: 0.5;
           }
         `}
       </style>
-
       <ReactFullpage
         //fullpage options
         licenseKey={"YOUR_LICENSE_KEY"}
         scrollingSpeed={1000} /* Options here */
         navigation
-        navigationPosition="left"
+        navigationPosition="right"
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>

@@ -1,18 +1,12 @@
 import React, { useState } from "react";
-import {
-  useColorModeValue,
-  Flex,
-  Box,
-  Center,
-  Button,
-  Image,
-} from "@chakra-ui/react";
+import dynamic from "next/dynamic";
+import { useColorModeValue, Flex, Box, Center, Button } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import Card from "components/SubComponents/Card";
-import TopicPage from "components/SubComponents/TopicPage";
 import { motion } from "framer-motion";
 import NextLink from "next/link";
-import styled from "@emotion/styled";
+
+const TopicPage = dynamic(() => import("components/SubComponents/TopicPage"));
 
 const Project = ({ pinnedItems }) => {
   const { t } = useTranslation();
@@ -115,15 +109,3 @@ const Project = ({ pinnedItems }) => {
 };
 
 export default Project;
-
-const Bg = styled(Image)`
-  background-image: url("/home.jpg");
-  width: 565px;
-  height: 465px;
-  background-position: 50% 48%;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  z-index: -1;
-  opacity: 0.7;
-`;

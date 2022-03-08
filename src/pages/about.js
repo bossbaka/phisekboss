@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import dynamic from "next/dynamic";
 import {
   Flex,
   Image,
@@ -10,16 +10,20 @@ import {
   Grid,
   Container,
   Tooltip,
-  Text,
   Link,
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { useTranslation } from "react-i18next";
 
 import { dataimg1, dataimg2 } from "data/dataImg";
-import ContentAbout from "components/SectionHomePage/about/contentAbout";
-import TimeLine from "components/SectionHomePage/about/timeLine";
-import TopicPage from "components/SubComponents/TopicPage";
+
+const ContentAbout = dynamic(() =>
+  import("components/SectionHomePage/about/contentAbout")
+);
+const TimeLine = dynamic(() =>
+  import("components/SectionHomePage/about/TimeLine")
+);
+const TopicPage = dynamic(() => import("components/SubComponents/TopicPage"));
 
 export default function About() {
   const { t } = useTranslation();
@@ -158,6 +162,7 @@ export default function About() {
             style={{ position: "relative", height: "35vh", marginTop: "12em" }}
           >
             <BoxImg />
+
             <Center h="35vh">
               <Link
                 href="pdf/javscript_the_complete_referrence.pdf"
@@ -194,4 +199,7 @@ const BoxImg = styled.div`
   top: 0;
   bottom: 0;
   opacity: 0.5;
+  @media only screen and (max-width: 540px) {
+    display: none;
+  }
 `;

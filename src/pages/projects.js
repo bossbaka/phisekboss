@@ -1,9 +1,7 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import { Center, Box, Container, SimpleGrid } from "@chakra-ui/react";
-import Card from "components/SubComponents/Card";
-
 import { useTranslation } from "react-i18next";
-import TopicPage from "components/SubComponents/TopicPage";
 import {
   ApolloClient,
   createHttpLink,
@@ -12,6 +10,9 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { motion } from "framer-motion";
+
+const Card = dynamic(() => import("components/SubComponents/Card"));
+const TopicPage = dynamic(() => import("components/SubComponents/TopicPage"));
 
 export async function getStaticProps() {
   const httpLink = createHttpLink({
@@ -113,8 +114,6 @@ export default function Projects({ pinnedItems }) {
               columns={{ base: 1, md: 2, lg: 3 }}
               spacing={5}
               variants={containerVariants}
-              initial="hidden"
-              animate="show"
             >
               <Card pinnedItems={pinnedItems} variants={teaserVariants} />
             </MotionSimpleGrid>

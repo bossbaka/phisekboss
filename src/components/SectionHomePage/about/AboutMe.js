@@ -1,11 +1,14 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import { Flex, Box, Container, Button, Center } from "@chakra-ui/react";
-import styled from "@emotion/styled";
 import { useTranslation } from "react-i18next";
 import ContentAbout from "./contentAbout";
 import NextLink from "next/link";
-import TopicPage from "components/SubComponents/TopicPage";
 import { motion } from "framer-motion";
+import Image from "components/Image";
+import MyImage from "/public/static/imgabout.jpg";
+
+const TopicPage = dynamic(() => import("components/SubComponents/TopicPage"));
 
 const AboutMe = () => {
   const { t } = useTranslation();
@@ -22,8 +25,15 @@ const AboutMe = () => {
           columnGap={"1.3em"}
           rowGap={"1.3em"}
         >
-          <BgAbout />
-
+          <div style={{ opacity: "0.7" }} className="displayimages">
+            <Image
+              src={MyImage}
+              alt="about"
+              width="640px"
+              height="433px"
+              placeholder="blur"
+            />
+          </div>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -55,14 +65,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-const BgAbout = styled.div`
-  background-image: url("/static/imgabout.jpg");
-  height: 50%;
-  width: 50%;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-  opacity: 0.7;
-`;

@@ -3,25 +3,14 @@ import Layout from "components/Layout";
 import { ChakraProvider, Spinner, useColorModeValue } from "@chakra-ui/react";
 import customTheme from "styles/theme";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useRouter, Router } from "next/router";
 import { motion } from "framer-motion";
 import styled from "@emotion/styled";
 import Head from "next/head";
+import NextNProgress from "nextjs-progressbar";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  // const [loading, setLoading] = useState(false);
-
-  // useEffect(() => {
-  //   router.events.on("routeChangeStart", (url) => {
-  //     //console.log("Route is changing");
-  //     setLoading(true);
-  //   });
-  //   router.events.on("routeChangeComplete", (url) => {
-  //     //console.log("Route is changed");
-  //     setLoading(false);
-  //   });
-  // }, []);
 
   return (
     <>
@@ -52,20 +41,8 @@ function MyApp({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#00aba9" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
+      <NextNProgress height={6} color="#7036b3" />
       <ChakraProvider theme={customTheme}>
-        {/* {loading && (
-          <BgSpinner>
-            <Spinner
-              size="xl"
-              pos="absolute"
-              top="0"
-              right="0"
-              bottom="0"
-              left="0"
-              margin="auto"
-            />
-          </BgSpinner>
-        )} */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

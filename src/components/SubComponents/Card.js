@@ -22,7 +22,7 @@ const Card = ({ pinnedItems, variants, w }) => {
     <>
       {pinnedItems.map((item, index) => {
         return (
-          <Link href={item.url} isExternal={true}>
+          <Link href={item.url} isExternal={true} key={index}>
             <MotionBox
               role={"group"}
               borderWidth="1px"
@@ -31,7 +31,6 @@ const Card = ({ pinnedItems, variants, w }) => {
               bg={useColorModeValue("white", "gray.800")}
               boxShadow={"2xl"}
               style={{ cursor: "pointer" }}
-              key={index}
               variants={variants}
               w={w}
             >
