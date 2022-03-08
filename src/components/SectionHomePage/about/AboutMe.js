@@ -1,7 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { Flex, Box, Container, Button, Center } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
 import ContentAbout from "./contentAbout";
 import NextLink from "next/link";
 import { motion } from "framer-motion";
@@ -11,8 +10,6 @@ import MyImage from "/public/static/imgabout.jpg";
 const TopicPage = dynamic(() => import("components/SubComponents/TopicPage"));
 
 const AboutMe = () => {
-  const { t } = useTranslation();
-
   return (
     <>
       <Container maxW="8xl">
@@ -46,7 +43,7 @@ const AboutMe = () => {
           >
             <Flex flexDirection="column">
               <Center>
-                <TopicPage title={t("about me")} />
+                <TopicPage title="ABOUT ME" />
               </Center>
               <Box mt="2em" mb="2em">
                 <ContentAbout />

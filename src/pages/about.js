@@ -13,7 +13,6 @@ import {
   Link,
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import { useTranslation } from "react-i18next";
 
 import { dataimg1, dataimg2 } from "data/dataImg";
 
@@ -26,8 +25,6 @@ const TimeLine = dynamic(() =>
 const TopicPage = dynamic(() => import("components/SubComponents/TopicPage"));
 
 export default function About() {
-  const { t } = useTranslation();
-
   return (
     <>
       <Head>
@@ -37,7 +34,7 @@ export default function About() {
       <main>
         <div style={{ position: "relative", height: "35vh" }}>
           <Center alignItems="center" height="35vh">
-            <TopicPage title={t("about me")} />
+            <TopicPage title="ABOUT ME" />
           </Center>
         </div>
 
@@ -53,7 +50,7 @@ export default function About() {
                 lineHeight={1.3}
                 letterSpacing="0.2em"
               >
-                {t("iam")}
+                I AM
               </Heading>
 
               <ContentAbout />
@@ -67,7 +64,7 @@ export default function About() {
                   lineHeight={1.3}
                   letterSpacing="3px"
                 >
-                  {t("skills")}
+                  SKILLS
                 </Heading>
               </Center>
 
@@ -77,7 +74,7 @@ export default function About() {
                 letterSpacing="2px"
                 fontWeight={"600"}
               >
-                {t("EXPERIENCED")}
+                EXPERIENCED
               </Heading>
 
               <Grid
@@ -116,7 +113,7 @@ export default function About() {
                 letterSpacing="2px"
                 fontWeight={"600"}
               >
-                {t("FAMILIAR")}
+                FAMILIAR{" "}
               </Heading>
               <Grid
                 templateColumns={{
@@ -151,7 +148,7 @@ export default function About() {
 
             <Center mt="10em" mb={10}>
               <Heading as="span" size="xl" lineHeight={1.3} letterSpacing="3px">
-                {t("experience")}
+                EXPERIENCE
               </Heading>
             </Center>
 
@@ -170,7 +167,7 @@ export default function About() {
                 target="_blank"
               >
                 <Button size="lg" variant="ghost" border="2px">
-                  {t("Open CV")}
+                  Open CV{" "}
                 </Button>
               </Link>
             </Center>

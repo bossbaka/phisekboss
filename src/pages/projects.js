@@ -1,7 +1,6 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import { Center, Box, Container, SimpleGrid } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
 import {
   ApolloClient,
   createHttpLink,
@@ -77,8 +76,6 @@ export async function getStaticProps() {
 }
 
 export default function Projects({ pinnedItems }) {
-  const { t } = useTranslation();
-
   const MotionSimpleGrid = motion(SimpleGrid);
 
   const containerVariants = {
@@ -104,7 +101,7 @@ export default function Projects({ pinnedItems }) {
       <main>
         <Container maxW="8xl">
           <Center height="35vh">
-            <TopicPage title={t("projects")} />
+            <TopicPage title="PROJECTS" />
           </Center>
 
           <Box mb="10em">

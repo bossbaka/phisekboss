@@ -1,50 +1,47 @@
 import React from "react";
 import { Heading, Link } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
 import { datapf } from "data/dataAbout";
 
 const ContentAbout = () => {
-  const { t } = useTranslation();
-
   return (
     <div>
       <Heading size="md" lineHeight="10">
-        {t("Name")} :{" "}
+        Name :{" "}
         <Heading as="span" size="md" fontWeight="normal">
-          {`${t(datapf.name)} (${t(datapf.nickname)})`}
+          {`${datapf.name} (${datapf.nickname})`}
         </Heading>
       </Heading>
 
       <Heading size="md" lineHeight="10">
-        {t("Age")} :{" "}
+        Age :{" "}
         <Heading as="span" size="md" fontWeight="normal">
           {datapf.age}
         </Heading>
       </Heading>
 
       <Heading size="md" lineHeight="10">
-        {t("Personality Types")} :{" "}
+        Personality Types :{" "}
         <Heading as="span" size="md" fontWeight="normal">
-          {t(datapf.personality)}
+          {datapf.personality}
         </Heading>
       </Heading>
 
       <Heading size="md" lineHeight="10">
-        {t("Language")} :{" "}
+        Language :{" "}
         <Heading as="span" size="md" fontWeight="normal">
-          {t(datapf.language)}
+          {datapf.language}
         </Heading>
       </Heading>
 
       <Heading size="md" lineHeight="10">
-        {t("Hobby")} :{" "}
+        Hobby :{" "}
         <Heading as="span" size="md" fontWeight="normal">
-          {t(datapf.hobby)}
+          {datapf.hobby}
         </Heading>
       </Heading>
 
       <Heading size="md" lineHeight="10">
-        {t("Email")} :{" "}
+        Email :{" "}
         <Heading as="span" size="md" fontWeight="normal">
           <Link href={`mailto: ${datapf.email} `}>{datapf.email} </Link>
         </Heading>

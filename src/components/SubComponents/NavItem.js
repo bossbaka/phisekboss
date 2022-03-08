@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Dropdown from "components/SubComponents/Dropdown";
-import { useTranslation } from "react-i18next";
+//import Dropdown from "components/SubComponents/Dropdown";
 import styled from "@emotion/styled";
 import {
   Flex,
@@ -28,21 +27,20 @@ export const NavItem = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   const refOnClicke = () => setClicked(!clicked);
-  const { t } = useTranslation();
 
   const router = useRouter();
 
   const navLinks = [
     {
-      name: `${t("home")}`,
+      name: `HOME`,
       path: "/",
     },
     {
-      name: `${t("about me")}`,
+      name: `ABOUT ME`,
       path: "/about",
     },
     {
-      name: `${t("projects")}`,
+      name: `PROJECTS`,
       path: "/projects",
     },
   ];
@@ -57,7 +55,7 @@ export const NavItem = () => {
               whileTap={{ sacale: 0.9 }}
               onClick={refOnClicke}
             >
-              {clicked || <MenuOC size="lg"> {t("menu")} </MenuOC>}
+              {clicked || <MenuOC size="lg"> MENU </MenuOC>}
             </motion.div>
           </Flex>
         </Container>
@@ -68,6 +66,7 @@ export const NavItem = () => {
           <Container maxW="8xl">
             <Flex alignItems="center" justifyContent="end" pt="40px" pr="16px">
               <IconButton
+                mr="10"
                 icon={
                   colorMode !== "light" ? (
                     <IconsSun height={30} width={30} />
@@ -77,13 +76,13 @@ export const NavItem = () => {
                 }
                 onClick={toggleColorMode}
               />
-              <Dropdown />
+              {/* <Dropdown /> */}
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ sacale: 0.9 }}
                 onClick={refOnClicke}
               >
-                {!clicked || <MenuOC size="lg"> {t("close")} </MenuOC>}
+                {!clicked || <MenuOC size="lg"> CLOSE </MenuOC>}
               </motion.div>
             </Flex>
           </Container>

@@ -1,9 +1,8 @@
 import "styles/globals.css";
 import Layout from "components/Layout";
-import { ChakraProvider, Spinner, useColorModeValue } from "@chakra-ui/react";
+import { ChakraProvider, useColorModeValue } from "@chakra-ui/react";
 import customTheme from "styles/theme";
-import { useState, useEffect } from "react";
-import { useRouter, Router } from "next/router";
+import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import styled from "@emotion/styled";
 import Head from "next/head";

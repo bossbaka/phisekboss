@@ -3,8 +3,8 @@ import { mode } from "@chakra-ui/theme-tools";
 
 const theme = extendTheme({
   fonts: {
-    heading: '"Montserrat", "Noto Sans JP", "IBM Plex Sans Thai"',
-    body: '"Montserrat", "Noto Sans JP", "IBM Plex Sans Thai"',
+    heading: '"Montserrat"',
+    body: '"Montserrat"',
   },
   styles: {
     global: (props) => ({

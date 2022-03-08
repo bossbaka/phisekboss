@@ -1,7 +1,6 @@
 import React from "react";
 import { Text, Flex, Heading, Link, Container } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import { useTranslation } from "react-i18next";
 import { Icon } from "@chakra-ui/react";
 import { FaEnvelope, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -27,7 +26,6 @@ const Home = () => {
       y: 0,
     },
   };
-  const { t } = useTranslation();
 
   const dataIconsLink = [
     {
@@ -56,13 +54,11 @@ const Home = () => {
               ml={{ base: "0", md: "2em" }}
               lineHeight={1.3}
             >
-              {t("hi")
-                .split("")
-                .map((char, index) => (
-                  <motion.span key={char + index} variants={letter}>
-                    {char}
-                  </motion.span>
-                ))}
+              {"Hi, I’m Boss".split("").map((char, index) => (
+                <motion.span key={char + index} variants={letter}>
+                  {char}
+                </motion.span>
+              ))}
             </Heading>
 
             <Heading
@@ -73,13 +69,11 @@ const Home = () => {
               ml={{ base: "0", md: "2em" }}
               lineHeight={1.3}
             >
-              {t("frontend")
-                .split("")
-                .map((char, index) => (
-                  <motion.span key={char + index} variants={letter}>
-                    {char}
-                  </motion.span>
-                ))}
+              {"a Front End Developer".split("").map((char, index) => (
+                <motion.span key={char + index} variants={letter}>
+                  {char}
+                </motion.span>
+              ))}
             </Heading>
           </motion.div>
 
@@ -98,7 +92,7 @@ const Home = () => {
 
           <ContactSocial>
             <Flex direction="column" align="center" rowGap={"5px"}>
-              <TextLink>{t("link")}</TextLink>
+              <TextLink>{"Link"}</TextLink>
               {dataIconsLink.map((item, index) => (
                 <Link
                   key={index}

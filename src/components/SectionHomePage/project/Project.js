@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { useColorModeValue, Flex, Box, Center, Button } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
 import Card from "components/SubComponents/Card";
 import { motion } from "framer-motion";
 import NextLink from "next/link";
@@ -9,8 +8,6 @@ import NextLink from "next/link";
 const TopicPage = dynamic(() => import("components/SubComponents/TopicPage"));
 
 const Project = ({ pinnedItems }) => {
-  const { t } = useTranslation();
-
   const [isVisible, setIsVisible] = useState(false);
 
   function over(e) {
@@ -23,7 +20,7 @@ const Project = ({ pinnedItems }) => {
   return (
     <>
       <Center height="35vh">
-        <TopicPage title={t("projects")} />
+        <TopicPage title={"PROJECTS"} />
       </Center>
 
       <motion.div
