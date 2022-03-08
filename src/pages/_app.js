@@ -1,10 +1,9 @@
 import "styles/globals.css";
 import Layout from "components/Layout";
-import { ChakraProvider, useColorModeValue } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import customTheme from "styles/theme";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import styled from "@emotion/styled";
 import Head from "next/head";
 import NextNProgress from "nextjs-progressbar";
 
@@ -63,12 +62,3 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
-
-const BgSpinner = styled.div`
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 9999;
-  background-color: ${() =>
-    useColorModeValue("rgba(235, 235, 235)", "rgba(26, 26, 26)")};
-`;
