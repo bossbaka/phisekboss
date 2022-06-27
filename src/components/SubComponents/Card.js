@@ -43,7 +43,7 @@ const Card = ({ pinnedItems, variants, w }) => {
                   color={"gray.500"}
                   fontSize={"md"}
                   wordBreak="break-word"
-                  minH={"80px"}
+                  minH={"120px"}
                 >
                   {item.description}
                 </Text>

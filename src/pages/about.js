@@ -162,7 +162,7 @@ export default function About() {
 
             <Center h="35vh">
               <Link
-                href="pdf/javscript_the_complete_referrence.pdf"
+                href="pdf/Resume_Phisek_Pinpia.pdf"
                 //download
                 target="_blank"
               >

@@ -11,17 +11,17 @@ const dataTimeLine = [
     dateyear: "Aug 2020 - Sep 2021",
     title: "Front-End Developer",
     desc: `
-    Nexpie Co. Ltd`,
+    Nexpie Co., Ltd`,
   },
   {
     cssname: "row-2",
     icons: FaBriefcase,
     iconsdesc: "Internship",
-    dateyear: "Feb. - May 2019",
+    dateyear: "Feb 2019 - May 2019",
     title: "Developer",
     desc: ` 
     Internship.
-    Happio co.ltd`,
+    Happio Co., Ltd`,
   },
   {
     cssname: "row-1",
@@ -38,10 +38,10 @@ const dataTimeLine = [
     cssname: "row-2",
     icons: FaGraduationCap,
     iconsdesc: "Education",
-    dateyear: "2016  - 2019",
+    dateyear: "2014  - 2015",
     title: "Information Technology",
     desc: ` 
-    Diplomaof High Vocational Cert. , 
+    Diploma of High Vocational Cert. , 
     Saraburi Technical College`,
   },
 ];

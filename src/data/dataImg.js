@@ -28,32 +28,8 @@ export const dataimg1 = [
     alt: "Redux Saga",
   },
   {
-    img: "/images/skills/experienced/wordpress.png",
-    alt: "Wordpress",
-  },
-  {
-    img: "/images/skills/experienced/bootstrap.png",
-    alt: "Bootstrap",
-  },
-  {
-    img: "/images/skills/experienced/bulma.png",
-    alt: "Bulma",
-  },
-  {
-    img: "/images/skills/experienced/nextjs.png",
-    alt: "Nextjs",
-  },
-  {
     img: "/images/skills/experienced/pettier.png",
     alt: "Pettier",
-  },
-  {
-    img: "/images/skills/experienced/ionic.png",
-    alt: "Ionic",
-  },
-  {
-    img: "/images/skills/experienced/chakra-ui.png",
-    alt: "Chakra Ui",
   },
   {
     img: "/images/skills/experienced/react-hook-form.png",
@@ -62,14 +38,6 @@ export const dataimg1 = [
   {
     img: "/images/skills/experienced/git.png",
     alt: "Git",
-  },
-  {
-    img: "/images/skills/experienced/recoil.png",
-    alt: "Recoil",
-  },
-  {
-    img: "/images/skills/experienced/frontity.png",
-    alt: "Frontity",
   },
   {
     img: "/images/skills/experienced/react-router.png",
@@ -91,6 +59,10 @@ export const dataimg2 = [
     alt: "Typescript",
   },
   {
+    img: "/images/skills/experienced/nextjs.png",
+    alt: "Nextjs",
+  },
+  {
     img: "/images/skills/familiar/remixjs.png",
     alt: "Remix",
   },
@@ -99,20 +71,48 @@ export const dataimg2 = [
     alt: "Redux",
   },
   {
+    img: "/images/skills/experienced/recoil.png",
+    alt: "Recoil",
+  },
+  {
+    img: "/images/skills/experienced/frontity.png",
+    alt: "Frontity",
+  },
+  {
+    img: "/images/skills/experienced/chakra-ui.png",
+    alt: "Chakra Ui",
+  },
+  {
+    img: "/images/skills/experienced/bootstrap.png",
+    alt: "Bootstrap",
+  },
+  {
+    img: "/images/skills/experienced/bulma.png",
+    alt: "Bulma",
+  },
+  {
+    img: "/images/skills/experienced/ionic.png",
+    alt: "Ionic",
+  },
+  {
+    img: "/images/skills/experienced/wordpress.png",
+    alt: "Wordpress",
+  },
+  {
+    img: "/images/skills/familiar/rq-logo.png",
+    alt: "React Query",
+  },
+  {
+    img: "/images/skills/familiar/tailwindcss_logo.png",
+    alt: "Tailwindcss",
+  },
+  {
     img: "/images/skills/familiar/mui.png",
     alt: "Mui",
   },
   {
-    img: "/images/skills/familiar/graphql.png",
-    alt: "GraphQL",
-  },
-  {
     img: "/images/skills/familiar/firebase.png",
     alt: "Firebase",
-  },
-  {
-    img: "/images/skills/familiar/docker.png",
-    alt: "Docker",
   },
   {
     img: "/images/skills/familiar/asana.png",
