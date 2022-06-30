@@ -59,7 +59,7 @@ export default function Dropdown() {
         as={Button}
         leftIcon={selectedOption.icons}
       >
-        <Heading size="md" isTruncated>
+        <Heading size="md" istruncated="true">
           {selectedOption.trans}
         </Heading>
       </StyledMenuButton>

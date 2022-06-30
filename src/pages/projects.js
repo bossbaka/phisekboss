@@ -1,6 +1,13 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import { Center, Box, Container, SimpleGrid } from "@chakra-ui/react";
+import {
+  Center,
+  Box,
+  Container,
+  SimpleGrid,
+  Button,
+  Link,
+} from "@chakra-ui/react";
 import {
   ApolloClient,
   createHttpLink,
@@ -115,6 +122,17 @@ export default function Projects({ pinnedItems }) {
               <Card pinnedItems={pinnedItems} variants={teaserVariants} />
             </MotionSimpleGrid>
           </Box>
+          <Center mb="5em">
+            <Link
+              href="https://github.com/bossbaka?tab=repositories"
+              target="_blank"
+              aria-label="[link]"
+            >
+              <Button colorScheme="black" variant="outline" size="lg">
+                All Repositories
+              </Button>
+            </Link>
+          </Center>
         </Container>
       </main>
     </>

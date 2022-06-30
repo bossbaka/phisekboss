@@ -35,7 +35,7 @@ const Card = ({ pinnedItems, variants, w }) => {
               w={w}
             >
               <Stack pt={10} align={"center"}>
-                <Heading fontSize={"2xl"} fontWeight={500} isTruncated>
+                <Heading fontSize={"2xl"} fontWeight={500} istruncated="true">
                   {item.name}
                 </Heading>
                 <Text

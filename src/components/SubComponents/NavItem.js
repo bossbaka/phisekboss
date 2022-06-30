@@ -123,7 +123,7 @@ const ContainerNav = styled.div`
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 999;
   background-color: ${() =>
     useColorModeValue("rgba(235, 235, 235, 0.96)", "rgba(26, 26, 26, 0.96)")};
   transition: all 0.5s ease;

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import ReactFullpage from "@fullpage/react-fullpage";
 
 import {
   ApolloClient,
@@ -9,6 +8,8 @@ import {
   gql,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import ReactPageScroller from "react-page-scroller";
+import { useState } from "react";
 
 const Home = dynamic(() => import("components/SectionHomePage/home/Home"));
 const AboutMe = dynamic(() =>
@@ -81,45 +82,95 @@ export async function getStaticProps() {
 }
 
 export default function Index({ pinnedItems }) {
+  const [currentPage, setCurrentPage] = useState(null);
+
+  const handlePageChange = (number) => {
+    setCurrentPage(number);
+  };
+
+  // const handleBeforePageChange = (number) => {
+  //   number;
+  // };
+
+  const getPagesNumbers = (number) => {
+    const pageNumbers = [];
+
+    for (let i = 0; i <= 2; i++) {
+      pageNumbers.push(
+        <>
+          <style global jsx>
+            {`
+              .icon-scroller {
+                position: fixed;
+                z-index: 100;
+                top: 50%;
+                right: 0;
+                opacity: 1;
+                transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -webkit-transform: translate3d(0, -50%, 0);
+                margin-right: 10px;
+              }
+              .icon-scroller li {
+                display: block;
+                width: 14px;
+                height: 13px;
+                margin: 7px;
+                position: relative;
+              }
+              .icon-scroller span {
+                border-radius: 100%;
+                position: absolute;
+                z-index: 1;
+                height: 8px;
+                width: 8px;
+                border: 1px solid #7036b3;
+                background: transform;
+                cursor: pointer;
+              }
+              .active {
+                background: #7036b3;
+              }
+              .hidenum {
+                position: absolute;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+              }
+            `}
+          </style>
+
+          <ul>
+            <li>
+              <span className="hidenum">{i}</span>
+              <span
+                className={`${currentPage === i ? "active" : null}`}
+                onClick={() => handlePageChange(i - 0)}
+              />
+            </li>
+          </ul>
+        </>
+      );
+    }
+
+    return [...pageNumbers];
+  };
+
   return (
     <>
       <Head>
         <title>Home</title>
       </Head>
-      <style global jsx>
-        {`
-          #fp-nav.fp-left {
-            z-index: 10 !important;
-          }
-          #fp-nav ul li a span,
-          .fp-slidesNav ul li a span {
-            background: #cf3860 !important;
-            opacity: 0.5;
-          }
-        `}
-      </style>
-      <ReactFullpage
-        //fullpage options
-        licenseKey={"YOUR_LICENSE_KEY"}
-        scrollingSpeed={1000} /* Options here */
-        navigation
-        navigationPosition="right"
-        render={({ state, fullpageApi }) => {
-          return (
-            <ReactFullpage.Wrapper>
-              <div className="section">
-                <Home />
-              </div>
-              <div className="section">
-                <AboutMe />
-              </div>
-              <div className="section">
-                <Project pinnedItems={pinnedItems} />
-              </div>
-            </ReactFullpage.Wrapper>
-          );
-        }}
-      />
+      <ReactPageScroller
+        pageOnChange={handlePageChange}
+        //onBeforePageScroll={handleBeforePageChange}
+        customPageNumber={currentPage}
+      >
+        <Home />
+        <AboutMe />
+        <Project pinnedItems={pinnedItems} />
+      </ReactPageScroller>
+
+      <div className="icon-scroller">{getPagesNumbers()}</div>
     </>
   );
 }
