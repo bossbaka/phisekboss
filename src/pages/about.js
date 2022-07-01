@@ -167,7 +167,7 @@ export default function About() {
                 target="_blank"
               >
                 <Button size="lg" variant="ghost" border="2px">
-                  Open CV{" "}
+                  Open Resume{" "}
                 </Button>
               </Link>
             </Center>

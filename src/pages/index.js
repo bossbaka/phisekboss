@@ -139,7 +139,7 @@ export default function Index({ pinnedItems }) {
             `}
           </style>
 
-          <ul>
+          <ul key={i}>
             <li>
               <span className="hidenum">{i}</span>
               <span
