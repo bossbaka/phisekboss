@@ -20,7 +20,7 @@ const ContentAbout = dynamic(() =>
   import("components/SectionHomePage/about/contentAbout")
 );
 const TimeLine = dynamic(() =>
-  import("components/SectionHomePage/about/TimeLine")
+  import("components/SectionHomePage/about/timeLine")
 );
 const TopicPage = dynamic(() => import("components/SubComponents/TopicPage"));
 
