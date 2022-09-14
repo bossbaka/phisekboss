@@ -98,47 +98,6 @@ export default function Index({ pinnedItems }) {
     for (let i = 0; i <= 2; i++) {
       pageNumbers.push(
         <>
-          <style global jsx>
-            {`
-              .icon-scroller {
-                position: fixed;
-                z-index: 100;
-                top: 50%;
-                right: 0;
-                opacity: 1;
-                transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                -webkit-transform: translate3d(0, -50%, 0);
-                margin-right: 10px;
-              }
-              .icon-scroller li {
-                display: block;
-                width: 14px;
-                height: 13px;
-                margin: 7px;
-                position: relative;
-              }
-              .icon-scroller span {
-                border-radius: 100%;
-                position: absolute;
-                z-index: 1;
-                height: 8px;
-                width: 8px;
-                border: 1px solid #7036b3;
-                background: transform;
-                cursor: pointer;
-              }
-              .active {
-                background: #7036b3;
-              }
-              .hidenum {
-                position: absolute;
-                overflow: hidden;
-                clip: rect(0, 0, 0, 0);
-              }
-            `}
-          </style>
-
           <ul key={i}>
             <li>
               <span className="hidenum">{i}</span>
@@ -157,6 +116,47 @@ export default function Index({ pinnedItems }) {
 
   return (
     <>
+      <style global jsx>
+        {`
+          .icon-scroller {
+            position: fixed;
+            z-index: 100;
+            top: 50%;
+            right: 0;
+            opacity: 1;
+            transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translate3d(0, -50%, 0);
+            margin-right: 10px;
+          }
+          .icon-scroller li {
+            display: block;
+            width: 14px;
+            height: 13px;
+            margin: 7px;
+            position: relative;
+          }
+          .icon-scroller span {
+            border-radius: 100%;
+            position: absolute;
+            z-index: 1;
+            height: 8px;
+            width: 8px;
+            border: 1px solid #7036b3;
+            background: transform;
+            cursor: pointer;
+          }
+          .active {
+            background: #7036b3;
+          }
+          .hidenum {
+            position: absolute;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+          }
+        `}
+      </style>
+
       <Head>
         <title>Home</title>
       </Head>

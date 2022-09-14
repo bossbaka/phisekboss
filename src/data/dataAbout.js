@@ -4,6 +4,7 @@ export const datapf = {
   age: new Date().getFullYear() - 1996,
   personality: "Introvert",
   language: "Thai(Native), English(Fair)",
-  hobby: "Anime, Music, Movie, Museum, Social Media",
+  hobbiesandinterests:
+    "Listening to Music, Watching Movies, Gaming, Anime, Manga, Museum, Social Media, Fashion, Sneakers, Japanese Culture, Information Technology",
   email: "phisek.boss@gmail.com",
 };

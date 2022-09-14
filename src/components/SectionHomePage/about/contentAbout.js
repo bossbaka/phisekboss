@@ -4,7 +4,7 @@ import { datapf } from "data/dataAbout";
 
 const ContentAbout = () => {
   return (
-    <div>
+    <div style={{ width: "" }}>
       <Heading size="md" lineHeight="10">
         Name :{" "}
         <Heading as="span" size="md" fontWeight="normal">
@@ -34,9 +34,9 @@ const ContentAbout = () => {
       </Heading>
 
       <Heading size="md" lineHeight="10">
-        Hobby :{" "}
+        Hobbies & Interests :{" "}
         <Heading as="span" size="md" fontWeight="normal">
-          {datapf.hobby}
+          {datapf.hobbiesandinterests}
         </Heading>
       </Heading>
 

@@ -115,6 +115,14 @@ export const dataimg2 = [
     alt: "Firebase",
   },
   {
+    img: "/images/skills/familiar/graphql.png",
+    alt: "GraphQL",
+  },
+  {
+    img: "/images/skills/familiar/mongodb.png",
+    alt: "MongoDB",
+  },
+  {
     img: "/images/skills/familiar/asana.png",
     alt: "Asana",
   },

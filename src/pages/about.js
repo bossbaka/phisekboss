@@ -49,6 +49,7 @@ export default function About() {
                 size="xl"
                 lineHeight={1.3}
                 letterSpacing="0.2em"
+                style={{ width: "50%" }}
               >
                 I AM
               </Heading>

@@ -41,7 +41,7 @@ const AboutMe = () => {
               hidden: { opacity: 0, scale: 0 },
             }}
           >
-            <Flex flexDirection="column">
+            <Flex flexDirection="column" style={{ maxWidth: "550px" }}>
               <Center>
                 <TopicPage title="ABOUT ME" />
               </Center>
