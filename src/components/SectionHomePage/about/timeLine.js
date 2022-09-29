@@ -8,8 +8,8 @@ const dataTimeLine = [
     cssname: "row-1",
     icons: FaBriefcase,
     iconsdesc: "Experience",
-    dateyear: "Aug 2020 - Sep 2021",
-    title: "Front-End Developer",
+    dateyear: "Aug 2019 - Sep 2021",
+    title: "Front-End Engineer",
     desc: `
     Nexpie Co., Ltd`,
   },

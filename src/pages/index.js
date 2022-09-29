@@ -97,17 +97,15 @@ export default function Index({ pinnedItems }) {
 
     for (let i = 0; i <= 2; i++) {
       pageNumbers.push(
-        <>
-          <ul key={i}>
-            <li>
-              <span className="hidenum">{i}</span>
-              <span
-                className={`${currentPage === i ? "active" : null}`}
-                onClick={() => handlePageChange(i - 0)}
-              />
-            </li>
-          </ul>
-        </>
+        <ul key={i}>
+          <li>
+            <span className="hidenum">{i}</span>
+            <span
+              className={`${currentPage === i ? "active" : null}`}
+              onClick={() => handlePageChange(i - 0)}
+            />
+          </li>
+        </ul>
       );
     }
 

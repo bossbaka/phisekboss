@@ -130,4 +130,8 @@ export const dataimg2 = [
     img: "/images/skills/familiar/trello.png",
     alt: "Trello",
   },
+  {
+    img: "/images/skills/familiar/zustand.png",
+    alt: "Zustand",
+  },
 ];
