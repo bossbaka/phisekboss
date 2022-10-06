@@ -11,12 +11,12 @@
 
   "Name": "Name",
   "Age": "Age",
-  "Personality Types": "Personality Types",
+  "Personality Type": "Personality Type",
   "Language": "Language",
   "Hobby": "Hobby",
   "Email": "Email",
   "Open CV": "Open CV",
-  
+
   "Phisek Pinpia": "Phisek Pinpia",
   "Boss": "Boss",
   "Introvert": "Introvert",
@@ -26,8 +26,6 @@
   "PROFICIENT": "PROFICIENT",
   "EXPERIENCED": "EXPERIENCED",
   "FAMILIAR": "FAMILIAR",
-
-
 
   "home": "HOME",
   "about me": "ABOUT ME",

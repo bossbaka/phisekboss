@@ -20,7 +20,7 @@ const ContentAbout = () => {
       </Heading>
 
       <Heading size="md" lineHeight="10">
-        Personality Types :{" "}
+        Personality Type :{" "}
         <Heading as="span" size="md" fontWeight="normal">
           {datapf.personality}
         </Heading>
